@@ -248,6 +248,7 @@ class ActiveRecord::Base
         import_helper(*args)
       end
     end
+   alias_method :ar_import, :import
 
     def import_helper( *args )
       options = { :validate=>true, :timestamps=>true, :primary_key=>primary_key }
